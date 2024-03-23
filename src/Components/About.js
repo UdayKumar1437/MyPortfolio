@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, IconButton } from "@mui/material";
+import { Button } from "@mui/material";
 import CountUp from 'react-countup';
 
 const About = () => {

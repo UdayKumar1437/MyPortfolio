@@ -1,4 +1,3 @@
-import { Button, Stack } from "@mui/material";
 import React, { useState } from "react";
 import CountUp from "react-countup";
 
@@ -89,7 +88,7 @@ const EducationAndExperience = () => {
           {skills.map((skill) => (
             <div className="flex flex-col items-center  h-[150px] w-[180px]">
               <div className="h-[90px] w-[90px] rounded-full bg-white flex justify-center items-center">
-                <img src={skill.logo} />
+                <img alt="logo" src={skill.logo} />
               </div>
               <div className="shadow-md shadow-[#FA6C2C] bg-white text-center w-full py-[5px] inline-block">
                 <h1>
@@ -132,6 +131,7 @@ const EducationAndExperience = () => {
             <div className="flex flex bg-white p-[20px] rounded-lg items-center">
               <div className="border-[1px] border-[#FA6C2C] flex justify-center h-[70px] w-[70px] items-center rounded-full">
                 <img
+                  alt="company-logo"
                   src="https://credesign.vercel.app/onePage/onePageFour/img/tabLogoOne.png"
                   className="h-[40px]"
                 />

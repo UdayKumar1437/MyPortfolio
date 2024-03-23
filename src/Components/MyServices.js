@@ -24,11 +24,11 @@ const MyServices = () => {
         }
     ]
   return (
-    <div>
+    <div className='pb-[50px]'>
         <h1 className='text-4xl font-bold mb-[50px]'>MY SERVICES</h1>
         <div className='flex flex-wrap justify-center gap-[20px]'>
             {data.map((ele)=><div className='hover:bg-[#FFF5EF] h-[350px] w-[250px] border-[1px] rounded-lg border-[#FA6C2C]'>
-                <img className='mt-[50px] ml-[30px] mr-[30px]' src={ele?.img}/>
+                <img alt='logo' className='mt-[50px] ml-[30px] mr-[30px]' src={ele?.img}/>
                 <h1 className='text-xl text-left font-bold mt-[20px] ml-[30px] mr-[30px]'>{ele?.title}</h1>
                 <p className='text-left mt-[20px] ml-[30px] mr-[30px]'>Sugary sweet lorem ipsum? You got it with Cup cake Ipsum, the only text generator treatment contrary.</p>
             </div>)}

@@ -8,6 +8,8 @@ import IntroSection from "./IntroSection";
 import About from "./About";
 import MyServices from "./MyServices";
 import EducationAndExperience from "./EducationAndExperience";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -19,12 +21,13 @@ const NavBar = () => {
             <img alt="logo" className="h-[40px]" src={'https://credesign.vercel.app/onePage/onePageFour/img/Logo.png'} />
           </Link>
         </div>
-        <ul className="flex items-center gap-[20px] iPhoneSE:hidden iPadMini:flex">
+        <ul className="flex items-center gap-[20px] iPhoneSE:hidden laptop:flex">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            {/* <Link to="#about">About</Link> */}
+            <a className="hover:text-[#FA6C2C]" href="#about">About</a>
           </li>
           <li>
             <Link to="/blog">Services</Link>
@@ -45,7 +48,7 @@ const NavBar = () => {
             <Button sx={{ color: "white",backgroundColor:"#FA6C2C",':hover': { backgroundColor: '#FA6C2C' }}} >Contact us</Button>
           </li>
         </ul>
-        <div onClick={() => setOpen(!open)} className={`block iPadMini:hidden`}>
+        <div onClick={() => setOpen(!open)} className={`block laptop:hidden`}>
           <IconButton>
             {open ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
@@ -56,7 +59,8 @@ const NavBar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            {/* <Link to="#about">About</Link> */}
+            <a href="#about">About</a>
           </li>
           <li>
             <Link to="/blog">Services</Link>
@@ -76,9 +80,13 @@ const NavBar = () => {
         </ul>
       </div>
       <IntroSection/>
-      <About/>
+      <div id="about">
+        <About/>
+      </div>
       <MyServices/>
       <EducationAndExperience/>
+      <ContactUs/>
+      <Footer/>
     </>
   );
 };
