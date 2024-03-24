@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from "@mui/material";
 import CountUp from 'react-countup';
+import myPic from "../Utils/UdayCropped.png"
 
 const About = () => {
   return (
@@ -9,9 +10,10 @@ const About = () => {
         <img
           alt="profile"
           className="h-[500px] iPhoneSE:h-[300px] laptop:h-[500px] float-right"
-          src={
-            "https://credesign.vercel.app/onePage/onePageFour/img/aboutFourImg.png"
-          }
+          // src={
+          //   "https://credesign.vercel.app/onePage/onePageFour/img/aboutFourImg.png"
+          // }
+          src={myPic}
         />
       </div>
       <div className="pr-[5%] w-1/2 iPhoneSE:w-full flex flex-col justify-center gap-[10px] laptop:w-1/2 text-left pl-[5%]">
