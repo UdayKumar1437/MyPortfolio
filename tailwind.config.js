@@ -15,6 +15,11 @@ module.exports = {
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
     },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+      Poppins:['Poppins']
+    },
   },
   plugins: [],
 }

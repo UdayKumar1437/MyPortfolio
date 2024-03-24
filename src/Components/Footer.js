@@ -33,7 +33,7 @@ const Footer = () => {
         </ul>
         <ul className="flex flex-col gap-[15px]  text-white text-start">
           <li className="text-xl">Contact</li>
-          <li className="w-full">202 Dog Hill Lane Beloit,KS 67420</li>
+          <li className="w-full">34-13-11/1, Om Tailor Street, <br/> Gandhi Nagar, Mandapeta 533308</li>
           <li className="text-[#FA6C2C]">+91 7670848696</li>
           <li className="">
             <Stack direction={"row"} spacing={2}>

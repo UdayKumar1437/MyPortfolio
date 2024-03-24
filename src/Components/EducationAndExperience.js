@@ -144,10 +144,10 @@ const EducationAndExperience = () => {
               </div>
               <div className="w-[90%] pl-[2%]">
                 <div className="flex justify-between">
-                  <h1 className="font-bold text-[20px]">{data.title}</h1>
+                  <h1 className="font-bold text-[20px] iPhoneSE:text-[15px] laptop:text-[20px]">{data.title}</h1>
                   <p className="text-[#FA6C2C] font-bold">{data.yoE}</p>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between iPhoneSE:text-[15px] laptop:text-[20px]">
                   <h4>{data.subTitle}</h4>
                   <h2>{data.timeScale}</h2>
                 </div>

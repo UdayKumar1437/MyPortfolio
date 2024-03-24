@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
-import CountUp from "react-countup";
+import { Button } from "@mui/material";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import MailIcon from '@mui/icons-material/Mail';
 import TextField from '@mui/material/TextField';

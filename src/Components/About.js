@@ -21,14 +21,10 @@ const About = () => {
           I design that help user more easily to use
         </h1>
         <p className="text-[#656565]">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old.
+        Specializing in React, I'm passionate about crafting seamless user experiences and bringing designs to life. In addition to my frontend expertise, I also have a solid foundation in Python, adding versatility to my toolkit and allowing me to tackle diverse challenges with confidence.
         </p>
         <p className="text-[#656565]">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old.
+        When I'm not coding, you can often find me exploring the outdoors or diving into a good book. I believe in the power of continuous learning and embracing new experiences to fuel my creativity and growth.
         </p>
         <table>
           <tr>

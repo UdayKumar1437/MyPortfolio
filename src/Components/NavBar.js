@@ -69,39 +69,39 @@ const NavBar = () => {
           </div>
         </nav>
         <ul
-        className={`dropdown-menu overflow-hidden transition-max-height duration-700 ease-in-out ${open ? 'max-h-screen' : 'max-h-0'} bg-[#0C1923] text-white text-[17px] text-start`}
+        className={`dropdown-menu overflow-hidden transition-max-height duration-700 ease-in-out ${open ? 'max-h-screen' : 'max-h-0'} bg-[#0C1923] text-white text-[15px] text-start font-Poppins uppercase`}
           // className={`bg-[#0C1923] text-white text-[17px] text-start`}
           // style={{ display: open ? "block" : "none" }}
         >
-          <li className="py-[8px] pl-[5%]">
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/">Home</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="#about">About</Link>
             {/* <a href="#about">About</a> */}
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/blog">Services</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/contact-us">Resume</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/contact-us">Portfolio</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/contact-us">Testimonial</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
-          <li className="py-[8px] pl-[5%]">
+          <Divider sx={{backgroundColor:"#93989C"}}/>
+          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
             <Link to="/contact-us">Blog</Link>
           </li>
-          <Divider sx={{backgroundColor:"white"}}/>
+          <Divider sx={{backgroundColor:"#93989C"}}/>
         </ul>
       </div>
       <IntroSection />
