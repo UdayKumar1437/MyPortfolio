@@ -13,9 +13,9 @@ import Footer from "./Footer";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <div className="max-w-[1440px] mx-auto">
       <div>
-      <nav className="bg-[#FFFFFF] py-[20px] iPhoneSE:py-[10px] laptop:py-[20px] flex justify-between px-[30px] items-center">
+      <nav className="bg-[#FFFFFF] py-[20px] iPhoneSE:py-[10px] laptop:py-[20px] flex justify-between px-[5%] items-center">
         <div>
           <Link to="/">
             <img alt="logo" className="h-[40px]" src={'https://credesign.vercel.app/onePage/onePageFour/img/Logo.png'} />
@@ -80,14 +80,14 @@ const NavBar = () => {
         </ul>
       </div>
       <IntroSection/>
-      <div id="about">
+      <div className="pb-[20px]" id="about">
         <About/>
       </div>
       <MyServices/>
       <EducationAndExperience/>
       <ContactUs/>
       <Footer/>
-    </>
+    </div>
   );
 };
 

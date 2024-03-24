@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 
 const ContactUs = () => {
   return (
-    <div className="flex pt-[100px] w-full bg-[#FFFFFF] iPhoneSE:flex-col laptop:flex-row pb-[50px]">
+    <div className="flex pt-[100px] w-full bg-[#FFFFFF] iPhoneSE:flex-col laptop:flex-row pb-[50px] gap-0 iPhoneSE:gap-[20px] laptop:gap-0">
       <div className="w-1/2 iPhoneSE:w-full laptop:w-1/2 flex pl-[5%] flex-col gap-[40px]">
         <h1 className="text-start font-bold text-4xl pr-[20%]">Need help? Get in touch now!</h1>
         <div className="flex gap-[20px] ">

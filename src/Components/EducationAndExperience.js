@@ -18,35 +18,40 @@ const EducationAndExperience = () => {
           {
             title: "Heeddata Private Ltd",
             subTitle: "Software Engineer",
-            yoE: "1 Year 6 Months",
+            yoE: "9 Months",
             timeScale: "July 2023 - Present",
+            logo:"https://media.licdn.com/dms/image/D560BAQGYvZ-hlgaKYQ/company-logo_200_200/0/1698841597700/heeddata_logo?e=2147483647&v=beta&t=JLiyMRPCVfMCIdBpvyOeEE6o1H1kMi2EC0nMzCoU2yk"
           },
           {
-            title: "Heeddata Private Ltd",
-            subTitle: "Software Engineer",
-            yoE: "1 Year 6 Months",
-            timeScale: "July 2023 - Present",
-          },
-          {
-            title: "Heeddata Private Ltd",
-            subTitle: "Software Engineer",
-            yoE: "1 Year 6 Months",
-            timeScale: "July 2023 - Present",
-          },
+            title: "Infolob Global Solutions",
+            subTitle: "Staff Consultant",
+            yoE: "9 Months",
+            timeScale: "Oct 2022 - June 2023",
+            logo:"https://media.licdn.com/dms/image/C4D0BAQExb5Z7Ea43Dg/company-logo_200_200/0/1631335675410?e=2147483647&v=beta&t=UiljvJ5yXSmc7bBWH_fDuJVQIBSrMmQEolN-7uVFVSk"
+          }
         ]
       : [
           {
-            title: "Heeddata Private Ltd",
-            subTitle: "Software Engineer",
-            yoE: "1 Year 6 Months",
-            timeScale: "July 2023 - Present",
+            title: "VSM College of Engg",
+            subTitle: "Electronics & Comm",
+            yoE: "3 Years",
+            timeScale: "2019-2022",
+            logo:"https://www.vsm.edu.in/vsm/img/logo.png"
           },
           {
-            title: "Heeddata Private Ltd",
-            subTitle: "Software Engineer",
-            yoE: "1 Year 6 Months",
-            timeScale: "July 2023 - Present",
+            title: "Andhra Polytechnic",
+            subTitle: "Diploma in ECE",
+            yoE: "3 Years",
+            timeScale: "2016 - 2019",
+            logo:"https://images.collegedunia.com/public/college_data/images/logos/1586421714apcklogo.jpg"
           },
+          {
+            title: "Vaishnavi High School",
+            subTitle: "SSC",
+            yoE: "1 Year ",
+            timeScale: "2015 - 2016",
+            logo:"https://pbs.twimg.com/profile_images/578844000267816960/6cj6d4oZ_400x400.png"
+          }
         ];
   const skills = [
     {
@@ -103,7 +108,7 @@ const EducationAndExperience = () => {
         </div>
         <div></div>
       </div>
-      <div className="w-1/2 iPhoneSE:w-full pr-[5%] laptop:w-1/2">
+      <div className="w-1/2 iPhoneSE:w-full pr-[5%] iPhoneSE:pr-0 laptop:pr-[5%] laptop:w-1/2">
         <div className="border-[1px] border-[#FA6C2C] mb-[10%] ">
           <button
             onClick={(e) => handleButton(e)}
@@ -126,13 +131,14 @@ const EducationAndExperience = () => {
             Education
           </button>
         </div>
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[20px] pb-0 iPhoneSE:pb-[30px] laptop:pb-0 ">
           {cards.map((data) => (
             <div className="flex flex bg-white p-[20px] rounded-lg items-center">
               <div className="border-[1px] border-[#FA6C2C] flex justify-center h-[70px] w-[70px] items-center rounded-full">
                 <img
                   alt="company-logo"
-                  src="https://credesign.vercel.app/onePage/onePageFour/img/tabLogoOne.png"
+                  // src="https://credesign.vercel.app/onePage/onePageFour/img/tabLogoOne.png"
+                  src={data.logo}
                   className="h-[40px]"
                 />
               </div>
