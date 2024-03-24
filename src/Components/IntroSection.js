@@ -85,7 +85,7 @@ const IntroSection = () => {
           </div>
           <img
             alt="profile"
-            className="h-[500px] iPhoneSE:h-[400px] relative top-0 laptop:h-[500px] float-right"
+            className="h-[500px] iPhoneSE:h-[350px] relative top-0 laptop:h-[500px] float-right"
             // src={
             //   "https://credesign.vercel.app/onePage/onePageFour/img/homeBannerFourImg.png"
             // }
