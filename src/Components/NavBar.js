@@ -10,6 +10,7 @@ import MyServices from "./MyServices";
 import EducationAndExperience from "./EducationAndExperience";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import MySkills from "./MySkills";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -113,6 +114,9 @@ const NavBar = () => {
       </div>
       <div className="pb-[20px]" id="about">
         <About />
+      </div>
+      <div className="pb-[20px]" id="about">
+        <MySkills />
       </div>
       <div id="services">
         <MyServices />
