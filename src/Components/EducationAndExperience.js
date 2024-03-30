@@ -1,9 +1,82 @@
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Typography,
+  styled,
+} from "@mui/material";
 import React, { useState } from "react";
 import CountUp from "react-countup";
+import CloseIcon from "@mui/icons-material/Close";
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
 
 const EducationAndExperience = () => {
   const [activeButton, setActiveButton] = useState("Professional Experiences");
-
+  const [open, setOpen] = useState(false);
+  const [selectedData , setSelectedData] = useState(null);
+  const Dialog = ({data,handleClose,open})=>{
+    return (
+      <BootstrapDialog
+                onClose={handleClose}
+                aria-labelledby="customized-dialog-title"
+                open={open}
+              >
+                <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+                  {data.dialogTitle}
+                </DialogTitle>
+                <IconButton
+                  aria-label="close"
+                  onClick={handleClose}
+                  sx={{
+                    position: "absolute",
+                    right: 8,
+                    top: 8,
+                    color: (theme) => theme.palette.grey[500],
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+                <DialogContent dividers>
+                  <Typography gutterBottom>
+                    {data.dialogContentOne}
+                  </Typography>
+                  <Typography gutterBottom>
+                    {data.dialogContentTwo}
+                  </Typography>
+                  <Typography gutterBottom>
+                    {data.dialogContentThree}
+                  </Typography>
+                </DialogContent>
+                <DialogActions>
+                  <Button disabled={data.websiteLink?false:true} autoFocus onClick={()=>navigateToWebsite(data.websiteLink)}>
+                    {data.buttonText}
+                  </Button>
+                </DialogActions>
+              </BootstrapDialog>
+    )
+  }
+  const handleClickOpen = (data) => {
+    setSelectedData(data);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const navigateToWebsite = (url) => {
+    window.open(url, "_blank");
+    setOpen(false);
+  }
   const handleButton = (e) => {
     if (e.target.innerText === "Professional Experiences") {
       setActiveButton("Professional Experiences");
@@ -16,42 +89,72 @@ const EducationAndExperience = () => {
     activeButton === "Professional Experiences"
       ? [
           {
+            dialogTitle : "Heeddata Private Ltd",
+            dialogContentOne :"Heeddata is an impact-oriented multi-cloud management platform that dashboards a visibility into your cloud costs, utilizations, and performances. It integrates with all major CSPs (Oracle Cloud Infrastructure, AWS, Google Cloud, and Microsoft Azure) and their various cloud regions. It is built on the FinOps framework to provide granular cost visibility with AI/ML optimization engine for continuous improvement.",
+            dialogContentTwo:"The platform helps enterprises' leaderships to track and extract measurable outcomes across FinOps in order to decrease cloud costs and increase operational efficiencies by governing operations, security, cost, access, and resources.",
+            dialogContentThree:"Heeddata is useful for cloud-using enterprises of all sizes, operating in any industry including financial services, healthcare, retail, transportation, manufacturing, EdTech, telecommunications, and public sector.",
+            websiteLink:"https://www.heeddata.com/",
             title: "Heeddata Private Ltd",
             subTitle: "Software Engineer",
             yoE: "9 Months",
             timeScale: "July 2023 - Present",
-            logo:"https://media.licdn.com/dms/image/D560BAQGYvZ-hlgaKYQ/company-logo_200_200/0/1698841597700/heeddata_logo?e=2147483647&v=beta&t=JLiyMRPCVfMCIdBpvyOeEE6o1H1kMi2EC0nMzCoU2yk"
+            logo: "https://media.licdn.com/dms/image/D560BAQGYvZ-hlgaKYQ/company-logo_200_200/0/1698841597700/heeddata_logo?e=2147483647&v=beta&t=JLiyMRPCVfMCIdBpvyOeEE6o1H1kMi2EC0nMzCoU2yk",
+            buttonText:"Visit Heeddata Website"
           },
           {
+            dialogTitle:"Infolob Global Solutions",
+            dialogContentOne:"INFOLOB is a prosperous information technology consulting organization dedicated to customer satisfaction via flawless digital transformation and admirable managed services. Founded in 2009 — INFOLOB is a multi-award-winning Oracle Managed Partner with ISO 9001-2015 certification and currently has offices in Irving, Texas; Dubai, UAE; and Hyderabad, Mumbai, Chennai, and Gurugram, India. Our innovation lab is at our headquarter in Irving, TX.",
+            dialogContentTwo:"",
+            dialogContentThree:"",
+            websiteLink:"https://www.infolob.com/",
             title: "Infolob Global Solutions",
             subTitle: "Staff Consultant",
             yoE: "9 Months",
             timeScale: "Oct 2022 - June 2023",
-            logo:"https://media.licdn.com/dms/image/C4D0BAQExb5Z7Ea43Dg/company-logo_200_200/0/1631335675410?e=2147483647&v=beta&t=UiljvJ5yXSmc7bBWH_fDuJVQIBSrMmQEolN-7uVFVSk"
-          }
+            logo: "https://media.licdn.com/dms/image/C4D0BAQExb5Z7Ea43Dg/company-logo_200_200/0/1631335675410?e=2147483647&v=beta&t=UiljvJ5yXSmc7bBWH_fDuJVQIBSrMmQEolN-7uVFVSk",
+            buttonText:"Visit Infolob Website"
+          },
         ]
       : [
           {
+            dialogTitle:"VSM College of Engineering",
+            dialogContentOne:"VSM College of Engineering established in the year 2009 by Ramachandrapuram Educational society is one of the premier institutions affiliated to JNTU – Kakinada.",
+            dialogContentTwo:"",
+            dialogContentThree:"",
+            websiteLink:"https://www.vsm.edu.in/",
             title: "VSM College of Engg",
             subTitle: "Electronics & Comm",
             yoE: "3 Years",
             timeScale: "2019-2022",
-            logo:"https://www.vsm.edu.in/vsm/img/logo.png"
+            logo: "https://www.vsm.edu.in/vsm/img/logo.png",
+            buttonText:"Visit College Website"
           },
           {
+            dialogTitle:"Andhra Polytechnic College, Kakinada",
+            dialogContentOne:"Andhra Polytechnic College, Kakinada which is widely popular as APC Kakinada was established in the year 1946 and it is the first polytechnic of Andhra Pradesh. APC Kakinada courses are provided at diploma levels only in the disciplines of Engineering and Architecture which consists of 10 Diploma programmes.",
+            dialogContentTwo:"",
+            dialogContentThree:"",
+            websiteLink:"https://andhrapolytechnickakinada.ac.in/",
             title: "Andhra Polytechnic",
             subTitle: "Diploma in ECE",
             yoE: "3 Years",
             timeScale: "2016 - 2019",
-            logo:"https://images.collegedunia.com/public/college_data/images/logos/1586421714apcklogo.jpg"
+            logo: "https://images.collegedunia.com/public/college_data/images/logos/1586421714apcklogo.jpg",
+            buttonText:"Visit College Website"
           },
           {
+            dialogTitle:"Vaishnavi High School, Mandapeta",
+            dialogContentOne:"VAISHNAVI PUBLIC SCHOOL was established in 2006 and it is managed by the Pvt. Unaided. It is located in Rural area. It is located in MANDAPETA block of EAST GODAVARI district of ANDHRA PRADESH. The school consists of Grades from 1 to 10.",
+            dialogContentTwo:"",
+            dialogContentThree:"",
+            websiteLink:"",
             title: "Vaishnavi High School",
             subTitle: "SSC",
             yoE: "1 Year ",
             timeScale: "2015 - 2016",
-            logo:"https://pbs.twimg.com/profile_images/578844000267816960/6cj6d4oZ_400x400.png"
-          }
+            logo: "https://pbs.twimg.com/profile_images/578844000267816960/6cj6d4oZ_400x400.png",
+            buttonText:"Visit School Website"
+          },
         ];
   const skills = [
     {
@@ -133,18 +236,21 @@ const EducationAndExperience = () => {
         </div>
         <div className="flex flex-col gap-[20px] pb-0 iPhoneSE:pb-[30px] laptop:pb-0 ">
           {cards.map((data) => (
-            <div className="flex flex bg-white p-[20px] rounded-lg items-center">
+            <div key={data.title} className="flex bg-white p-[20px] rounded-lg items-center">
               <div className="border-[1px] border-[#FA6C2C] flex justify-center h-[70px] w-[70px] items-center rounded-full">
                 <img
+                  onClick={()=>handleClickOpen(data)}
                   alt="company-logo"
                   // src="https://credesign.vercel.app/onePage/onePageFour/img/tabLogoOne.png"
                   src={data.logo}
-                  className="h-[40px]"
+                  className="h-[40px] cursor-pointer"
                 />
               </div>
               <div className="w-[90%] pl-[2%]">
                 <div className="flex justify-between">
-                  <h1 className="font-bold text-[20px] iPhoneSE:text-[15px] laptop:text-[20px]">{data.title}</h1>
+                  <h1 className="font-bold text-[20px] iPhoneSE:text-[15px] laptop:text-[20px]">
+                    {data.title}
+                  </h1>
                   <p className="text-[#FA6C2C] font-bold">{data.yoE}</p>
                 </div>
                 <div className="flex justify-between iPhoneSE:text-[15px] laptop:text-[20px]">
@@ -155,6 +261,7 @@ const EducationAndExperience = () => {
             </div>
           ))}
         </div>
+        {selectedData && <Dialog data={selectedData} open={open} handleClose={handleClose}/>}
       </div>
     </div>
   );
