@@ -32,8 +32,8 @@ const EducationAndExperience = () => {
                 aria-labelledby="customized-dialog-title"
                 open={open}
               >
-                <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-                  {data.dialogTitle}
+                <DialogTitle sx={{ m: 0, p: 2 ,display:"flex", alignItems:"center",gap:"10px"}} id="customized-dialog-title">
+                  <img alt="logo" className="h-[40px]" src={data.logo}/> {data.dialogTitle}
                 </DialogTitle>
                 <IconButton
                   aria-label="close"
