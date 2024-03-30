@@ -243,7 +243,7 @@ const EducationAndExperience = () => {
                   alt="company-logo"
                   // src="https://credesign.vercel.app/onePage/onePageFour/img/tabLogoOne.png"
                   src={data.logo}
-                  className="h-[40px] cursor-pointer"
+                  className="h-[60px] cursor-pointer  rounded-full"
                 />
               </div>
               <div className="w-[90%] pl-[2%]">
