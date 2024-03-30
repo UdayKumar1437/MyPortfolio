@@ -14,6 +14,7 @@ module.exports = {
 
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
+      '2k':'2000px'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

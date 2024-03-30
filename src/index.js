@@ -10,11 +10,13 @@ import {
 import About from './Components/About';
 import Blog from './Components/Blog';
 import ContactUs from './Components/ContactUs';
+import Error404 from './Components/Error404';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <Error404/>,
     children: [
       {
         path: "about",

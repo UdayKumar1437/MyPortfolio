@@ -85,6 +85,13 @@ const IntroSection = () => {
           <div className="absolute animate-scale-up bg-white rounded-full h-[60px] flex justify-center items-center w-[60px] bottom-0 left-[50%] z-10">
             <img alt="logo" className="h-[20px]" src={tailwindCssLogo} />
           </div>
+          {/* <div className="absolute animate-scale-up bg-white rounded-full h-[60px] flex justify-center items-center w-[60px] top-[10%] right-0 z-10">
+            <img
+            alt="logo"
+              className="h-[20px]"
+              src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"
+            />
+          </div> */}
           <img
             alt="profile"
             className="h-[500px] iPhoneSE:h-[350px] relative top-0 laptop:h-[500px] float-right"
