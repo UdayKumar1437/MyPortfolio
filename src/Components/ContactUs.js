@@ -8,7 +8,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const ContactUs = () => {
   return (
     <div className="flex pt-[100px] w-full bg-[#FFFFFF] iPhoneSE:flex-col laptop:flex-row pb-[50px] gap-0 iPhoneSE:gap-[20px] laptop:gap-0">
-      <div className="w-1/2 iPhoneSE:w-full laptop:w-1/2 flex pl-[5%] flex-col gap-[40px]">
+      <div className="w-1/2 iPhoneSE:w-full laptop:w-1/2 flex pl-[5%] flex-col gap-[20px]">
         <h1 className="text-start font-bold text-4xl pr-[20%]">Need help? Get in touch now!</h1>
         <div onClick={() => window.open("tel:+91 7670848696", "_blank")} className="flex gap-[20px] items-center cursor-pointer">
           <div className="bg-[#FFF5EF] h-[60px] w-[60px] flex justify-center items-center rounded-xl">
