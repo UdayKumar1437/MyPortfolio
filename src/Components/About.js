@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "@mui/material";
 import CountUp from "react-countup";
 import myPic from "../Utils/UdayCropped.png";
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+  const { ref:downloadButtonCV, inView:downloadButtonCVVisible } = useInView();
   return (
     <div className="flex pt-[100px] w-full bg-[#FFFFFF] iPhoneSE:flex-col laptop:flex-row gap-0 iPhoneSE:gap-[15px] laptop:gap-0">
       <div className="w-1/2 iPhoneSE:w-full laptop:w-1/2 flex justify-center">
@@ -26,7 +28,7 @@ const About = () => {
         <p className="text-[#656565]">
         When I'm not coding, you can often find me exploring the outdoors or diving into a good book. I believe in the power of continuous learning and embracing new experiences to fuel my creativity and growth.
         </p>
-        <table>
+        <table ref={downloadButtonCV} >
           <tr>
             <td>
               <h1 className="text-3xl text-[#FA6C2C] font-bold">
@@ -48,7 +50,7 @@ const About = () => {
             </td>
           </tr>
         </table>
-        <div className="mb-0 iPhoneSE:mb-[20px] laptop:mb-0">
+        <div className={`mb-0 iPhoneSE:mb-[20px] laptop:mb-0 ${downloadButtonCVVisible ? "animate-slide-up" : ""}`}>
           <Button
             sx={{
               color: "white",
