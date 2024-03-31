@@ -202,7 +202,7 @@ const EducationAndExperience = () => {
                 <h1>
                   {skill.name}{" "}
                   <span className="text-[#FA6C2C] font-bold">
-                    <CountUp end={skill.percentage} duration={2} />%
+                    <CountUp enableScrollSpy end={skill.percentage} duration={2} />%
                   </span>
                 </h1>
               </div>

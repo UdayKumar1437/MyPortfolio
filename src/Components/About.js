@@ -30,19 +30,19 @@ const About = () => {
           <tr>
             <td>
               <h1 className="text-3xl text-[#FA6C2C] font-bold">
-                <CountUp end={107} duration={2} />+
+                <CountUp enableScrollSpy end={107} duration={2} />+
               </h1>
               <p>Complete Project</p>
             </td>
             <td>
               <h1 className="text-3xl text-[#FA6C2C] font-bold">
-                <CountUp end={17} duration={2} />+
+                <CountUp enableScrollSpy end={17} duration={2} />+
               </h1>
               <p>Clients on worldwide</p>
             </td>
             <td>
               <h1 className="text-3xl text-[#FA6C2C] font-bold">
-                <CountUp end={16} duration={2} />+
+                <CountUp enableScrollSpy end={16} duration={2} />+
               </h1>
               <p>Client Satisfied</p>
             </td>
