@@ -237,7 +237,7 @@ const EducationAndExperience = () => {
         <div className="flex flex-col gap-[20px] pb-0 iPhoneSE:pb-[30px] laptop:pb-0 ">
           {cards.map((data) => (
             <div key={data.title} className="flex bg-white p-[20px] rounded-lg items-center">
-              <div className="border-[1px] border-[#FA6C2C] flex justify-center h-[70px] w-[70px] items-center rounded-full">
+              <div className="border-[1px] border-[#FA6C2C] flex justify-center min-h-[70px] min-w-[70px] items-center rounded-full">
                 <img
                   onClick={()=>handleClickOpen(data)}
                   alt="company-logo"
