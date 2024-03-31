@@ -34,6 +34,7 @@ const NavBar = () => {
                   "https://credesign.vercel.app/onePage/onePageFour/img/Logo.png"
                 }
               />
+
             </Link>
           </div>
           <ul className="flex items-center gap-[20px] iPhoneSE:hidden laptop:flex">
@@ -52,8 +53,8 @@ const NavBar = () => {
             <li>
               <Link to="/contact-us">Portfolio</Link>
             </li>
-            <li>
-              <Link to="/contact-us">Testimonial</Link>
+            <li className="hover:text-[#FA6C2C] cursor-pointer" onClick={() => scrollToID("testimonial")}>
+            Testimonial
             </li>
             <li>
               <Link to="/contact-us">Blog</Link>
@@ -100,8 +101,8 @@ const NavBar = () => {
             <Link to="/contact-us">Portfolio</Link>
           </li>
           <Divider sx={{backgroundColor:"#93989C"}}/>
-          <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
-            <Link to="/contact-us">Testimonial</Link>
+          <li onClick={() => {scrollToID("testimonial");setOpen(false)}} className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
+          Testimonial
           </li>
           <Divider sx={{backgroundColor:"#93989C"}}/>
           <li className="py-[8px] pl-[5%] hover:bg-[#263139] cursor-pointer">
@@ -125,7 +126,7 @@ const NavBar = () => {
       <div id="education">
         <EducationAndExperience />
       </div>
-      <div>
+      <div id="testimonial">
         <TestinomialContainer/>
       </div>
       <div id="contact">
