@@ -194,7 +194,7 @@ const EducationAndExperience = () => {
         <h1 className="text-5xl font-semibold">Education & Experience</h1>
         <div className="flex flex-wrap justify-center gap-[20px]">
           {skills.map((skill) => (
-            <div className="flex flex-col items-center  h-[150px] w-[180px]">
+            <div key={skill.logo} className="flex flex-col items-center  h-[150px] w-[180px]">
               <div className="h-[90px] w-[90px] rounded-full bg-white flex justify-center items-center">
                 <img alt="logo" src={skill.logo} />
               </div>

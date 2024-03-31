@@ -11,6 +11,7 @@ import EducationAndExperience from "./EducationAndExperience";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import MySkills from "./MySkills";
+import TestinomialContainer from "../Containers/TestinomialContainer";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -123,6 +124,9 @@ const NavBar = () => {
       </div>
       <div id="education">
         <EducationAndExperience />
+      </div>
+      <div>
+        <TestinomialContainer/>
       </div>
       <div id="contact">
         <ContactUs />
