@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Button } from "@mui/material";
 import CountUp from "react-countup";
 import myPic from "../Utils/UdayCropped.png";

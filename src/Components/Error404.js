@@ -1,33 +1,20 @@
 import React from "react";
-import errorKitten from "../Utils/404.jpg";
-import { Button } from "@mui/material";
+import WestIcon from '@mui/icons-material/West';
 import { useNavigate } from "react-router-dom";
+import errorBg from "../Utils/404Bg.avif"
 
 const Error404 = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-[#A7B8B7] h-full w-full bg-blend-overlay flex flex-col iPhoneSE:flex-col laptop:flex-row ">
-      <div className="w-1/3 iPhoneSE:w-full laptop:w-1/3 flex items-center justify-center">
-        <img
-          className="w-[300px] h-[500px] rounded-xl"
-          src={errorKitten}
-          alt="kitten"
-        />
-      </div>
-      <div className="w-2/3 iPhoneSE:w-full laptop:w-2/3 font-Poppins px-[20px] flex flex-col justify-center text-lg">
-        <h1 className="leading-loose">
-          Meow! Looks like you've encountered a wandering kitten instead of the
-          page you were looking for. We're sorry for the mix-up! While we track
-          down the missing page, please accept this fluffy friend as a small
-          consolation.
-        </h1>
-        <h1>
-          In the meantime, feel free to click the button below to return to our
-          homepage:{" "}
-          <Button onClick={() => navigate("/")} variant="contained">
-            Home
-          </Button>
-        </h1>
+    <div className="h-screen" style={{ backgroundImage: `url(${errorBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="flex flex-col items-center justify-center gap-3 pt-[10%] px-[5%] text-center">
+        <h1 className="text-[#ffffff] font-semibold font-Poppins text-2xl">404</h1>
+        <p className="text-[#ffffff] font-bold text-4xl">Page not found</p>
+        <p className="text-[#f1f5f9] font-Poppins">Sorry, we couldn’t find the page you’re looking for.</p>
+        <div className="flex group items-center justify-center gap-1 cursor-pointer" onClick={() => navigate("/")}>
+          <p className="group-hover:-translate-x-1 transition delay- ease-in-out"><WestIcon fontSize="small" sx={{ color: "#FFFFFF" }}/></p>
+          <p className="text-[#FFFFFF] font-semibold font-Poppins">Back to home</p>
+        </div>
       </div>
     </div>
   );
