@@ -1,8 +1,5 @@
-import { Stack } from "@mui/material";
 import React from "react";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import XIcon from "@mui/icons-material/X";
 
 const Testinomial = () => {
   return (
